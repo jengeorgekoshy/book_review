@@ -1,8 +1,14 @@
 
 body {
   background-color: #E8ECEF;
+  color :#101c27;
 }
-
+.homebt{
+  margin-bottom: 12px;
+}
+img{
+  opacity: 0.3;
+}
 .centered {
     padding-top: 200px;
     text-align: center;
