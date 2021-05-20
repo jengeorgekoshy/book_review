@@ -1,1 +1,0 @@
-module.exports.MONGOURL = "mongodb+srv://jengeorge:YdNPEstS12hrec4l@cluster0.qe4o8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"

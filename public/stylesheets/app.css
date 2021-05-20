@@ -1,0 +1,14 @@
+.container.newbook{
+	margin-top: 7em;
+}
+
+#mainindexpage{
+	margin-top: 5em;
+}
+.home,.register,.login{
+	text-align: center;
+}
+.b{
+	font-weight: bold;
+	padding-right: 10px;
+}
