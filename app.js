@@ -95,7 +95,7 @@ app.post("/login", (req, res) => {
 					res.redirect("/books")
 				}
 			} else {
-				res.redirect('/')
+				res.render("home")
 			}
 		}
 	})
@@ -178,6 +178,18 @@ app.delete("/books/:id", function (req, res) {
 		}
 	});
 });
+
+
+app.post('/books/search', (req, res) => {
+	const search = req.body.search
+	Book.find({ title: { $regex: search, $options: '$i' } })
+		.then(data => {
+
+			res.render("index", { books: data })
+
+
+		})
+})
 
 var port = process.env.PORT || 3000;
 app.listen(port, process.env.IP, function () {

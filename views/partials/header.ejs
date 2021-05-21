@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Book Review App</title>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-		<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
-	</head>
-	<body>
 
-		<div class="ui top fixed inverted teal menu">
-			<div class="ui container">
-				<div class="header item"><i class="bookmark icon"></i> Book Review App</div>
-				<a href="/books" class="item">Home</a>
-				<a href="/books/new" class="item">New Book Review</a>
-			</div>
+<head>
+	<title>Book Review App</title>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+		integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+	<div class="ui top fixed inverted menu">
+		<div class="ui container">
+			<div class="header item"><i class="fas fa-book-open header-book"> </i> Goodreads Clone App</div>
+			<a href="/books" class="item">Home</a>
+			<a href="/books/new" class="item">New Book Review</a>
+			<a href="/" class="item">Log out</a>
 		</div>
+		<div class="search-container">
+			<form action="/books/search" method="POST">
+				<input type="text" placeholder="Search.." name="search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>

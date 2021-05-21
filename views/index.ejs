@@ -8,32 +8,40 @@
 					</div>
 					<div class="content">
 						<div class="header" style="margin-bottom: 10px;">
-							<a href="/books/<%=book._id%>"><%- book.title %></a>
+							<a href="/books/<%=book._id%>">
+								<%- book.title %>
+							</a>
 						</div>
 
 						<div class="author">
-							<span class="b">Author : </span><%- book.author %>
+							<span class="b">Author : </span>
+							<%- book.author %>
 						</div>
 
 						<div class="language">
-							<span class="b">Language : </span><%- book.language %>
+							<span class="b">Language : </span>
+							<%- book.language %>
 						</div>
 
 						<div class="genre">
-							<span class="b">Genre : </span><%- book.genre %>
+							<span class="b">Genre : </span>
+							<%- book.genre %>
 						</div>
 						<div class="meta">
 							<span class="b">Rating:
-							<% for (var i = 0; i < book.rating; i++) { -%>
-								<i class="yellow star icon" style="display: inline"></i>
-							<% } -%>
-							
-							</span><% for (var i = 0; i < 5 - book.rating; i++) { -%>
+								<% for (var i=0; i < book.rating; i++) { -%>
+									<i class="yellow star icon" style="display: inline"></i>
+									<% } -%>
+
+							</span>
+							<% for (var i=0; i < 5 - book.rating; i++) { -%>
 								<i class="yellow star outline icon" style="display: inline"></i>
-							<% } -%>
+								<% } -%>
 						</div>
 						<div class="description" style="text-align: justify;">
-							<p><%- book.description.substring(0,100) %> ...</p>
+							<p>
+								<%- book.description.substring(0,100) %> ...
+							</p>
 						</div>
 
 						<div class="extra">
@@ -41,7 +49,7 @@
 						</div>
 					</div>
 				</div>
-			<%});%>
+				<%});%>
 		</div>
 	</div>
-<%- include("./partials/footer") %>
+	<%- include("./partials/footer") %>

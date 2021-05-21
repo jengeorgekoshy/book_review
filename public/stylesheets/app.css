@@ -1,14 +1,93 @@
-.container.newbook{
-	margin-top: 7em;
+
+/*Login css*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+	background-color: #dadfe4;	
+	font-family: 'Poppins', sans-serif;
 }
 
-#mainindexpage{
-	margin-top: 5em;
-}
-.home,.register,.login{
+/*Home*/
+.home{
+	width:550px;
 	text-align: center;
+	margin: 0 auto;
+	margin-top: 80px;
+	color: #080d23bd;
 }
-.b{
+.home h1{
+	font-size: 50px;
 	font-weight: bold;
-	padding-right: 10px;
+	text-shadow: 2px 2px;
+}
+.home .button{
+	margin: 10px;
+	display: inline-block;
+
+}
+.home .h{
+	width:200px;
+	float: left;
+}
+.btn-block+.btn-block{
+	margin-top: 0;
+	margin-left: 15px;
+}
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-signin-heading,
+	.form-control {
+	  position: relative;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+.form-signin-heading{
+	font-size: 34px;
+}
+.ui.inverted.menu{
+	padding: 5px;
+	background-color: #060b2fc2;
+}
+
+.ui.text.container{
+	margin-top: 60px;
+}
+
+.search-container{
+	margin-top:7px;
+}
+
+.header-book{
+	margin-right: 3px;
 }
