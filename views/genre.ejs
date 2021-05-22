@@ -1,5 +1,30 @@
-<%- include("./partials/header.ejs") %>
-
-
-
-<%- include("./partials/footer.ejs") %>
+<%- include("./partials/header") %>
+	<div class="ui text container segment" id="mainindexpage">
+        <div class="ui huge header">Genre</div>
+		<div class="ui divided items">
+            <ul>
+                <% let unique = []
+                let arr = []
+                books.forEach(function(book){
+                    arr.push(book.genre)
+                });
+                arr.forEach(e=>{
+                    if(!unique.includes(e)){
+                        unique.push(e)
+                    }
+                })
+                %>
+                <% unique.forEach(function(book){%>
+                    <div class="item">
+                        <li><a href="/books/genre/<%- book %>">
+                            <div class="genre"style="font-size:22px;">
+                                <%- book %>
+                            </div>
+                        </a>
+                        </li>
+                    </div>
+                <%});%>
+            </ul>
+		</div>
+	</div>
+	<%- include("./partials/footer") %>

@@ -117,15 +117,55 @@ app.get("/books/new", function (req, res) {
 	res.render("new");
 });
 
+
 app.get("/books/author", (req, res) => {
-	res.render("author")
+	Book.find({}, function (err, data) {
+		if (err)
+			console.log(err)
+		res.render("author", { books: data })
+	})
 })
+
+app.get("/books/author/:author", (req, res) => {
+	const search = req.params.author
+	Book.find({ author: { $regex: search, $options: '$i' } })
+		.then(data => {
+			res.render("index", { books: data })
+		})
+})
+
 app.get("/books/language", (req, res) => {
-	res.render("language")
+	Book.find({}, function (err, data) {
+		if (err)
+			console.log(err)
+		res.render("language", { books: data })
+	})
 })
+
+app.get("/books/language/:language", (req, res) => {
+	const search = req.params.language
+	Book.find({ language: { $regex: search, $options: '$i' } })
+		.then(data => {
+			res.render("index", { books: data })
+		})
+})
+
 app.get("/books/genre", (req, res) => {
-	res.render("genre")
+	Book.find({}, function (err, data) {
+		if (err)
+			console.log(err)
+		res.render("genre", { books: data })
+	})
 })
+
+app.get("/books/genre/:genre", (req, res) => {
+	const search = req.params.genre
+	Book.find({ genre: { $regex: search, $options: '$i' } })
+		.then(data => {
+			res.render("index", { books: data })
+		})
+})
+
 app.post("/books", function (req, res) {
 	req.body.book.title = req.sanitize(req.body.book.title);
 	req.body.book.author = req.sanitize(req.body.book.author);
@@ -196,6 +236,7 @@ app.post('/books/search', (req, res) => {
 			res.render("index", { books: data })
 		})
 })
+
 
 var port = process.env.PORT || 3000;
 app.listen(port, process.env.IP, function () {
