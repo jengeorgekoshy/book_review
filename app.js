@@ -94,8 +94,11 @@ app.post("/login", (req, res) => {
 				if (foundUser.password === password) {
 					res.redirect("/books")
 				}
+				else {
+					res.redirect("/")
+				}
 			} else {
-				res.render("home")
+				res.redirect("/")
 			}
 		}
 	})
