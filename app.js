@@ -117,6 +117,15 @@ app.get("/books/new", function (req, res) {
 	res.render("new");
 });
 
+app.get("/books/author", (req, res) => {
+	res.render("author")
+})
+app.get("/books/language", (req, res) => {
+	res.render("language")
+})
+app.get("/books/genre", (req, res) => {
+	res.render("genre")
+})
 app.post("/books", function (req, res) {
 	req.body.book.title = req.sanitize(req.body.book.title);
 	req.body.book.author = req.sanitize(req.body.book.author);
@@ -184,10 +193,7 @@ app.post('/books/search', (req, res) => {
 	const search = req.body.search
 	Book.find({ title: { $regex: search, $options: '$i' } })
 		.then(data => {
-
 			res.render("index", { books: data })
-
-
 		})
 })
 
