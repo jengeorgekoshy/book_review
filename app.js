@@ -5,7 +5,8 @@ var expressSanitizer = require("express-sanitizer");
 var methodOverride = require("method-override");
 var app = express();
 require('dotenv/config');
-// App Configs
+
+
 mongoose.connect(process.env.MONGOURL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
