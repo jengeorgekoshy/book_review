@@ -75,8 +75,7 @@ app.post('/register', (req, res) => {
 	newUser.save(function (err) {
 		if (err) {
 			console.log(err)
-		}
-		else {
+		} else {
 			res.redirect('/books')
 		}
 	})

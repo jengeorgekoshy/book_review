@@ -33,6 +33,10 @@ body {
 	background-color: rgb(126, 51, 51);
 	border-color: rgb(110, 62, 72);
 }
+.btn-primary:focus{
+	background-color: rgb(126, 51, 51);
+	border-color: rgb(110, 62, 72);
+}
 .home h1{
 	font-size: 55px;
 	font-weight: bold;
