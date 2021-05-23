@@ -21,6 +21,9 @@ body {
 	margin-top: 80px;
 	color: #900038;
 }
+.home .front{
+	text-align: center;
+}
 .front{
 	padding: 20px;
 	color: #ffffff;
@@ -41,9 +44,7 @@ body {
 	font-size: 60px;
 	font-weight: bold;
 	margin-bottom: 30px;
-	text-shadow: -8px 7px 20px #6b0404;
-}
-
+	text-shadow: 2px 3px 20px #6b0404;
 }
 .home .button{
 	margin: 10px;
