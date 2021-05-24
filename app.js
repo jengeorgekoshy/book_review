@@ -24,6 +24,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
+
+/*User*/
 const userSchema = new mongoose.Schema({
 	email: String,
 	password: String,
@@ -32,7 +34,7 @@ const userSchema = new mongoose.Schema({
 
 const User = new mongoose.model("User", userSchema)
 
-
+/*Books*/
 var bookSchema = mongoose.Schema({
 	title: String,
 	image: String,
@@ -46,28 +48,32 @@ var bookSchema = mongoose.Schema({
 
 var Book = mongoose.model("Book", bookSchema);
 
+/*Home*/
 app.get("/", function (req, res) {
 	res.render("home");
 });
 
-
+/*Login*/
 app.get("/login", (req, res) => {
 	res.render("login")
 })
 
+/*Register*/
 app.get("/register", (req, res) => {
 	res.render("register")
 })
 
+/*Logout*/
 app.get("/logout", (req, res) => {
 	res.render("home")
 })
 
+/*BooksPage*/
 app.get('/booksPage', (req, res) => {
 	res.render('index')
 })
 
-
+/*POST for register*/
 app.post('/register', (req, res) => {
 	const newUser = new User({
 		email: req.body.username,
@@ -82,6 +88,7 @@ app.post('/register', (req, res) => {
 	})
 })
 
+/*POST for login*/
 app.post("/login", (req, res) => {
 	const username = req.body.username;
 	const password = req.body.password;
@@ -169,6 +176,7 @@ app.get("/books/genre/:genre", (req, res) => {
 		})
 })
 
+/*POST for books*/
 app.post("/books", function (req, res) {
 	req.body.book.title = req.sanitize(req.body.book.title);
 	req.body.book.author = req.sanitize(req.body.book.author);
@@ -221,6 +229,7 @@ app.put("/books/:id", function (req, res) {
 	});
 });
 
+/*Delete a book*/
 app.delete("/books/:id", function (req, res) {
 	Book.findByIdAndRemove(req.params.id, function (err) {
 		if (err) {
@@ -231,7 +240,7 @@ app.delete("/books/:id", function (req, res) {
 	});
 });
 
-
+/*POST for search*/
 app.post('/books/search', (req, res) => {
 	const search = req.body.search
 	Book.find({ title: { $regex: search, $options: '$i' } })
@@ -240,8 +249,8 @@ app.post('/books/search', (req, res) => {
 		})
 })
 
-
+/*specifying port*/
 var port = process.env.PORT || 3000;
 app.listen(port, process.env.IP, function () {
-	console.log("The Book Review App server has started")
+	console.log("The Book Review App server has started on port 3000")
 })
