@@ -22,7 +22,7 @@ Live link : https://crest312.herokuapp.com/
 Video of project demo : https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26e9c
 
 ## How to configure and run
-* CREST runs on Node.js version 14.16.1. Please have node and npm installed before to running this.
+* CREST runs on Node.js version 14.16.1. Please have node and npm installed before running this.
 ````
 git clone https://github.com/jengeorgekoshy/book_review.git
 ````
