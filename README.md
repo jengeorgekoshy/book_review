@@ -13,8 +13,7 @@ BFH/reccTJ0RhtuEggjAR/2021
 ## Link to product walkthrough
 
 ## How it Works ?
-1. Embed video of project demo
-  https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26e9c
+Video of project demo : https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26e9c
 ## Libraries used
 Library Name - Version
 ## How to configure
