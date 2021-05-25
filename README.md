@@ -24,7 +24,11 @@ Video of project demo : https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26
 ## How to configure and run
 * CREST runs on Node.js version 14.16.1. Please have node and npm installed before to running this.
 ````
-git clone 
+git clone https://github.com/jengeorgekoshy/book_review.git
+````
+````
+npm install
+node app.js
 ````
 ## Libraries used
 Library Name - Version
