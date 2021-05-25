@@ -16,7 +16,7 @@ BFH/reccTJ0RhtuEggjAR/2021
 * User can also add their favourite book into the CREST
 * Can search a particular book
 * Can categorize books based on author, language and genre
-## Link to product walkthrough
+## Link to product
 Live link : https://crest312.herokuapp.com/
 ## How it Works ?
 Video of project demo : https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26e9c
