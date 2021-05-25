@@ -7,9 +7,15 @@ from various categories like the author, language and genre. The user can also c
 2. Harinand A V
 3. Navami Ajay
 
-
 ## Team Id
 BFH/reccTJ0RhtuEggjAR/2021
+##Features of CREST
+* User can register or login to CREST
+* Can view all the books
+* Can review and rate a book
+* User can also add their favourite book into the CREST
+* Can search a particular book
+* Can categorize books based on author, language and genre
 ## Link to product walkthrough
 Live link : https://crest312.herokuapp.com/
 ## How it Works ?
