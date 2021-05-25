@@ -11,10 +11,10 @@ from various categories like the author, language and genre. The user can also c
 ## Team Id
 BFH/reccTJ0RhtuEggjAR/2021
 ## Link to product walkthrough
-https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26e9c
+
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+1. Embed video of project demo
+  https://www.loom.com/share/a63d876bde5046d3a1021a3de1a26e9c
 ## Libraries used
 Library Name - Version
 ## How to configure
