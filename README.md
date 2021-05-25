@@ -9,7 +9,7 @@ from various categories like the author, language and genre. The user can also c
 
 ## Team Id
 BFH/reccTJ0RhtuEggjAR/2021
-##Features of CREST
+## Features of CREST
 * User can register or login to CREST
 * Can view all the books
 * Can review and rate a book
