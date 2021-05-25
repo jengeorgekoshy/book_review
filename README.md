@@ -37,5 +37,6 @@ ejs           | 3.0.1
 express       | 4.17.1
 express-sanitizer | 1.0.5
 mongoose      | 5.8.4
-
+node        | 14.16.1
+npm        |  7.10.0
 
